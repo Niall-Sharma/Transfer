@@ -20,6 +20,11 @@ public class Movement : MonoBehaviour {
         {
             rb.AddForce(-right, 0, 0 * Time.deltaTime);
         }
+        if (rb.position.y < 4.1f)
+        {
+            FindObjectOfType<GameManager>().EndGame(); 
+        }
     }
+
 
 }
